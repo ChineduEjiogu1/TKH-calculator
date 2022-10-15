@@ -73,16 +73,17 @@ function equalsClicked()
     console.log(num)
     console.log(num2)
 
-    // connect math functions
+    // https://www.w3schools.com/jsref/prop_select_selectedindex.asp
     // https://www.geeksforgeeks.org/how-to-get-selected-value-in-dropdown-list-using-javascript/
     // https://stackoverflow.com/questions/52767068/how-do-i-link-my-javascript-function-to-an-html-element
-    if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "add")
+    let mathOperators = document.getElementById('operator')
+    if(mathOperators.options[mathOperators.selectedIndex].value === "add")
         result = operate('add', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "subtract")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "subtract")
         result = operate('subtract', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "multiply")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "multiply")
         result = operate('multiply', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "divide")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "divide")
         result = operate('divide', num, num2)
     else
         return 0

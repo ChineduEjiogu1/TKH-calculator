@@ -1,49 +1,84 @@
-function addition(num, num2)
+function add(num, num2)
 {
     return num + num2
 }
 
 // console.log(addition(213489, 48378))
 
-function subtraction(num, num2)
+function subtract(num, num2)
 {
     return num - num2;
 }
 
 // console.log(subtraction(34200, 4478))
 
-function multiplication(num, num2)
+function multiply(num, num2)
 {
     return num * num2
 }
 
 // console.log(multiplication(3550, 478))
 
-function division(num, num2)
+function divide(num, num2)
 {
     return num / num2
 }
 
+function chainOperations(operator, result, num)
+{
+    return eval(`${operator}(${result}, ${num})`)
+}
+
 // console.log(division(23993, 388))
 
-function operate(operator, num, num2)
+let ifUsed = false
+
+let holdResult = 0
+
+function operate(operator, num = 0, num2 = 0)
 {
+    document.getElementById("num").value = 0
+    document.getElementById("num2").value = 0
     operator = operator.toLowerCase()
 
-    if(operator === 'add')
-        return addition(num, num2)
-    
-    else if(operator === 'subtract')
-        return subtraction(num, num2)
+    // let operations = 
+    // {
+    //     "add": '+',
+    //     "subtract" : '-',
+    //     "multiply" : '*',
+    //     "divide": '/'
+    // };
 
-    else if(operator === 'multiply')
-        return multiplication(num, num2)
-    
-    else if(operator === 'divide')
-        return division(num, num2)
-    
+    if(ifUsed)
+    {
+        holdResult = eval(`${operator}(${num},${num2})`)
+        return holdResult
+    }
     else
-        return `Error: operator not recognized`
+    {
+       holdResult = chainOperations(operator, holdResult, num)
+    }
+
+    // holdResult = holdResult + num
+
+    // if(operator === 'add')
+    //     // return addition(num, num2)
+    //     holdResult = holdResult + num
+    
+    // else if(operator === 'subtract')
+    //     // return subtraction(num, num2)
+    //     holdResult = holdResult - num
+
+    // else if(operator === 'multiply')
+    //     // return multiplication(num, num2)
+    //     holdResult = holdResult * num
+    
+    // else if(operator === 'divide')
+    //     // return division(num, num2)
+    //     holdResult = holdResult / num
+    
+    // else
+    //     return `Error: operator not recognized`
 }
 
 let num = 0
@@ -69,28 +104,30 @@ function equalsClicked()
 
     operatorButtonVal = document.querySelector('#operator').value
     console.log(operatorButtonVal)
+
     // create values console.log
     console.log(num)
     console.log(num2)
 
     // connect math functions
+    // https://www.w3schools.com/jsref/prop_select_selectedindex.asp
     // https://www.geeksforgeeks.org/how-to-get-selected-value-in-dropdown-list-using-javascript/
     // https://stackoverflow.com/questions/52767068/how-do-i-link-my-javascript-function-to-an-html-element
-    if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "add")
+    let mathOperators = document.getElementById('operator')
+    if(mathOperators.options[mathOperators.selectedIndex].value === "add")
         result = operate('add', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "subtract")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "subtract")
         result = operate('subtract', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "multiply")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "multiply")
         result = operate('multiply', num, num2)
-    else if(document.getElementById('operator').options[document.getElementById('operator').selectedIndex].value === "divide")
+    else if(mathOperators.options[mathOperators.selectedIndex].value === "divide")
         result = operate('divide', num, num2)
     else
         return 0
 
     // display result on the page using DOM methods
-    // needs num and num2
-    document.getElementById("result-num").innerHTML = result
-    console.log(result)
+    document.getElementById("result-num").innerHTML = holdResult
+    // console.log(result)
 }
 
 // console.log(operate('add', 1, 5))

@@ -24,6 +24,11 @@ function divide(num, num2)
     return num / num2
 }
 
+function modulus(num, num2)
+{
+    return num % num2
+}
+
 function chainOperations(operator, result, num)
 {
     return eval(`${operator}(${result}, ${num})`)

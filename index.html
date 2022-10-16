@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <form>
@@ -22,6 +23,34 @@
   </form>
   <button id="equals-button" onclick="equalsClicked()">=</button>
   <h1 id="result-num">0</h1>
+
+  <!-- New UI -->
+  <div id="main-container">
+    <div id="screen" class="screen-color">
+      0
+    </div>
+    <div id="button-container">
+      <div class="button sign2"><input type="submit" class="button-click" value="AC"></input>AC</div>
+      <div class="button sign2"><input type="submit" class="button-click" value="+/-"></input>+/-</div>
+      <div class="button sign2"><input type="submit" class="button-click" value="%"></input>%</div>
+      <div class="button sign"><input type="submit" class="button-click" value="/"></input>/</div>
+      <div class="button number"><input type="submit" class="button-click" value="7"></input>7</div>
+      <div class="button number"><input type="submit" class="button-click" value="8"></input>8</div>
+      <div class="button number"><input type="submit" class="button-click" value="9"></input>9</div>
+      <div class="button sign"><input type="submit" class="button-click" value="*"></input>*</div>
+      <div class="button number"><input type="submit" class="button-click" value="4"></input>4</div>
+      <div class="button number"><input type="submit" class="button-click" value="5"></input>5</div>
+      <div class="button number"><input type="submit" class="button-click" value="6"></input>6</div>
+      <div class="button sign"><input type="submit" class="button-click" value="-"></input>-</div>
+      <div class="button number"><input type="submit" class="button-click" value="1"></input>1</div>
+      <div class="button number"><input type="submit" class="button-click" value="2"></input>2</div>
+      <div class="button number"><input type="submit" class="button-click" value="3"></input>3</div>
+      <div class="button sign"><input type="submit" class="button-click" value="+"></input>+</div>
+      <div id="zero" class="button number"><input type="submit" class="button-click" value="0"></input>0</div>
+      <div class="button number"><input type="submit" class="button-click" value="."></input>.</div>
+      <div class="button sign"><input type="submit" class="button-click" value="="></input>=</div>
+    </div>
+  </div>
   <script src="calculator.js"></script>
 </body>
 </html>

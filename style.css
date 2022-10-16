@@ -1,0 +1,89 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+#main-container
+{
+    width: 400px;
+    height: 600px;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    /* flipped because of flex-direction usually align-items is vertical*/
+    align-items: center; 
+    justify-content: space-evenly;
+    background-color: black;
+    border: 5px solid #005eb9;
+    border-radius: 15px;
+}
+
+#screen{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 13%;
+    width: 90%;
+    font-weight: 700;
+    font-size: 65px;
+    border-radius: 15px;
+    font-family: monospace;
+    color: white;
+    padding: 15px;
+    
+}
+
+#button-container{
+    height: 79%;
+    width: 98%;
+    border: 2px black solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23.5%;
+    height: 18.5%;
+    border: 2px black solid;
+    font-weight: 900;
+    font-size: 35px;
+    border-radius: 15px;
+}
+
+.button:hover{
+    transform: scale(1.025);
+    filter: brightness(1.5);
+}
+
+#zero{
+   width: 48.5%;
+}
+
+.number{
+    /* background-color: #56667A; */
+    background-color: #0BC9CD;
+}
+
+.sign{
+    background-color: #F17300;
+}
+
+.sign2{
+    background-color: #005eb9;
+}
+
+.screen-color{
+    background-color: #56667A;
+}
+
+.button-click{
+    position: absolute;
+    opacity: 0;
+    height: inherit;
+    width: inherit;
+}

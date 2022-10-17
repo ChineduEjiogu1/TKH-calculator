@@ -30,25 +30,25 @@
       0
     </div>
     <div id="button-container">
-      <div class="button sign2"><input type="submit" class="button-click" value="AC"></input>AC</div>
-      <div class="button sign2"><input type="submit" class="button-click" value="+/-"></input>+/-</div>
-      <div class="button sign2"><input type="submit" class="button-click" value="%"></input>%</div>
-      <div class="button sign"><input type="submit" class="button-click" value="/"></input>/</div>
-      <div class="button number"><input type="submit" class="button-click" value="7"></input>7</div>
-      <div class="button number"><input type="submit" class="button-click" value="8"></input>8</div>
-      <div class="button number"><input type="submit" class="button-click" value="9"></input>9</div>
-      <div class="button sign"><input type="submit" class="button-click" value="*"></input>*</div>
-      <div class="button number"><input type="submit" class="button-click" value="4"></input>4</div>
-      <div class="button number"><input type="submit" class="button-click" value="5"></input>5</div>
-      <div class="button number"><input type="submit" class="button-click" value="6"></input>6</div>
-      <div class="button sign"><input type="submit" class="button-click" value="-"></input>-</div>
-      <div class="button number"><input type="submit" class="button-click" value="1"></input>1</div>
-      <div class="button number"><input type="submit" class="button-click" value="2"></input>2</div>
-      <div class="button number"><input type="submit" class="button-click" value="3"></input>3</div>
-      <div class="button sign"><input type="submit" class="button-click" value="+"></input>+</div>
-      <div id="zero" class="button number"><input type="submit" class="button-click" value="0"></input>0</div>
-      <div class="button number"><input type="submit" class="button-click" value="."></input>.</div>
-      <div class="button sign"><input type="submit" class="button-click" value="="></input>=</div>
+      <div class="button sign2"><input type="submit" class="button-click" value="AC" onclick="clearScreen()"></input>AC</div>
+      <div class="button sign2"><input type="submit" class="button-click" value="+/-" onclick="clickEqual(this.value)"></input>+/-</div>
+      <div class="button sign2"><input type="submit" class="button-click" value="%" onclick="clickEqual(this.value)"></input>%</div>
+      <div class="button sign"><input type="submit" class="button-click" value="/" onclick="clickEqual(this.value)"></input>/</div>
+      <div class="button number"><input type="submit" class="button-click" value="7" onclick="clickEqual(this.value)"></input>7</div>
+      <div class="button number"><input type="submit" class="button-click" value="8" onclick="clickEqual(this.value)"></input>8</div>
+      <div class="button number"><input type="submit" class="button-click" value="9" onclick="clickEqual(this.value)"></input>9</div>
+      <div class="button sign"><input type="submit" class="button-click" value="*" onclick="clickEqual(this.value)"></input>*</div>
+      <div class="button number"><input type="submit" class="button-click" value="4" onclick="clickEqual(this.value)"></input>4</div>
+      <div class="button number"><input type="submit" class="button-click" value="5" onclick="clickEqual(this.value)"></input>5</div>
+      <div class="button number"><input type="submit" class="button-click" value="6" onclick="clickEqual(this.value)"></input>6</div>
+      <div class="button sign"><input type="submit" class="button-click" value="-" onclick="clickEqual('subtract')"></input>-</div>
+      <div class="button number"><input type="submit" class="button-click" value="1" onclick="clickEqual(this.value)"></input>1</div>
+      <div class="button number"><input type="submit" class="button-click" value="2" onclick="clickEqual(this.value)"></input>2</div>
+      <div class="button number"><input type="submit" class="button-click" value="3"  onclick="clickEqual(this.value)"></input>3</div>
+      <div class="button sign"><input type="submit" class="button-click" value="+" onclick="clickEqual(this.value)"></input>+</div>
+      <div id="zero" class="button number"><input type="submit" class="button-click" value="0" onclick="clickEqual(this.value)"></input>0</div>
+      <div class="button number"><input type="submit" class="button-click" value="." onclick="clickEqual(this.value)"></input>.</div>
+      <div class="button sign"><input type="submit" class="button-click" value="=" onclick="clickEqual(this.value)"></input>=</div>
     </div>
   </div>
   <script src="calculator.js"></script>
